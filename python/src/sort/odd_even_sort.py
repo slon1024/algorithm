@@ -5,13 +5,13 @@ def odd_even_sort(in_array):
 
     while not is_sorted:
         is_sorted = True
-        if not sort_loop_sort(even_loop, in_array):
+        if not sorted_loop(even_loop, in_array):
             is_sorted = False
-        if not sort_loop_sort(odd_loop, in_array):
+        if not sorted_loop(odd_loop, in_array):
             is_sorted = False
     return in_array
 
-def sort_loop_sort(loop, in_array):
+def sorted_loop(loop, in_array):
     is_sorted = True
     for i in loop:
         if in_array[i] > in_array[i+1]:
