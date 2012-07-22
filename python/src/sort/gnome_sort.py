@@ -4,10 +4,7 @@ def gnome_sort(in_array):
     nxt = curr + 1    
     while nxt < length:
         if in_array[curr] > in_array[nxt]:
-            tmp = in_array[curr]
-            in_array[curr] = in_array[nxt]
-            in_array[nxt]  = tmp
-            
+            in_array[curr], in_array[nxt] = in_array[nxt], in_array[curr]
             if curr > 0:
                 curr -= 1
         else:
