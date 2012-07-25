@@ -2,7 +2,7 @@ import random
 import unittest
 import src.sort.gnome_sort as sort
     
-class TestSelectionSort(unittest.TestCase):
+class TestGnomeSort(unittest.TestCase):
     def setUp(self):
         self.in_array = random.sample(range(0, 100), 20)
 
