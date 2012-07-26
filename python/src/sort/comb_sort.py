@@ -12,7 +12,7 @@ def comb_sort(in_array):
 
 
 def get_gap(gap):
-    return int(gap * 10/15)
+    return int(gap * 10/11)
 
 
 
