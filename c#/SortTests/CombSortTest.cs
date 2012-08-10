@@ -5,8 +5,7 @@ using Sort;
 
 namespace SortTests
 {
-    [TestFixture]
-    public class BubbleSortTest
+    class CombSortTest
     {
         private readonly ArrayList _values = new ArrayList();
 
@@ -24,11 +23,11 @@ namespace SortTests
             var expected = (ArrayList)_values.Clone();
             expected.Sort();
 
-            var bubbleSort = new BubbleSort();
-            var actual = bubbleSort.Sort(_values);
-
+            var combSort = new CombSort();
+            var actual = combSort.Sort(_values);
 
             Assert.That(expected, Is.EqualTo(actual));
         }
     }
+
 }

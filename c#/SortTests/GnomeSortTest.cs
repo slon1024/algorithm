@@ -6,7 +6,7 @@ using Sort;
 namespace SortTests
 {
     [TestFixture]
-    public class BubbleSortTest
+    public class GnomeSortTest
     {
         private readonly ArrayList _values = new ArrayList();
 
@@ -24,8 +24,8 @@ namespace SortTests
             var expected = (ArrayList)_values.Clone();
             expected.Sort();
 
-            var bubbleSort = new BubbleSort();
-            var actual = bubbleSort.Sort(_values);
+            var gnomeSort = new GnomeSort();
+            var actual = gnomeSort.Sort(_values);
 
 
             Assert.That(expected, Is.EqualTo(actual));

@@ -79,6 +79,9 @@
   <ItemGroup>
     <Compile Include="BubbleSortTest.cs" />
     <Compile Include="CocktailSortTest.cs" />
+    <Compile Include="CombSortTest.cs" />
+    <Compile Include="GnomeSortTest.cs" />
+    <Compile Include="InsertionSortTest.cs" />
     <Compile Include="MergeSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StrandSortTest.cs" />

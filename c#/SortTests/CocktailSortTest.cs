@@ -7,12 +7,12 @@ namespace SortTests
 {
     class CocktailSortTest
     {
-        private ArrayList _values = new ArrayList();
+        private readonly ArrayList _values = new ArrayList();
 
         [SetUp]
         public void SetUp()
         {
-            Random randomNumber = new Random();
+            var randomNumber = new Random();
             for (int i = 0; i < 100; i++)
                 _values.Add(randomNumber.Next(1, 1000));
         }
@@ -25,8 +25,8 @@ namespace SortTests
 
             var cocktailSort = new CocktailSort();
             var actual = cocktailSort.Sort(_values);
-            
-            Assert.AreEqual(expected, actual);
+
+            Assert.That(expected, Is.EqualTo(actual));
         }
     }
     

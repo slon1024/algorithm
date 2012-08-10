@@ -6,7 +6,7 @@ using Sort;
 namespace SortTests
 {
     [TestFixture]
-    public class BubbleSortTest
+    public class InsertionSortTest
     {
         private readonly ArrayList _values = new ArrayList();
 
@@ -24,11 +24,11 @@ namespace SortTests
             var expected = (ArrayList)_values.Clone();
             expected.Sort();
 
-            var bubbleSort = new BubbleSort();
-            var actual = bubbleSort.Sort(_values);
-
+            var insertionSort = new InsertionSort();
+            var actual = insertionSort.Sort(_values);
 
             Assert.That(expected, Is.EqualTo(actual));
         }
+
     }
 }

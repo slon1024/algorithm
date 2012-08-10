@@ -16,7 +16,7 @@ namespace Sort
             
         }
 
-        private ArrayList Merge(ArrayList left, ArrayList right)
+        public static ArrayList Merge(ArrayList left, ArrayList right)
         {
             var result = new ArrayList();
             int leftptr=0, rightptr=0;

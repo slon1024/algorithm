@@ -8,12 +8,12 @@ namespace SortTests
     [TestFixture]
     public class MergeSortTest
     {
-        private ArrayList _values = new ArrayList();
+        private readonly ArrayList _values = new ArrayList();
 
         [SetUp]
         public void SetUp()
         {
-            Random randomNumber = new Random();
+            var randomNumber = new Random();
             for (int i = 0; i < 100; i++)
                 _values.Add(randomNumber.Next(1, 1000));
         }
@@ -24,11 +24,10 @@ namespace SortTests
             var expected = (ArrayList) _values.Clone();
             expected.Sort();
 
-            var mgrSort = new MergeSort();
-            var actual = mgrSort.Sort(_values);
+            var mergeSort = new MergeSort();
+            var actual = mergeSort.Sort(_values);
             
-
-            Assert.AreEqual(expected, actual);
+            Assert.That(expected, Is.EqualTo(actual));
         }
     }
 }
