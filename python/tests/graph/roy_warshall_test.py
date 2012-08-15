@@ -2,7 +2,7 @@ import random
 import unittest
 import src.graph.roy_warshall as graph
 
-class TestMergeSort(unittest.TestCase):
+class TestRoyWarshall(unittest.TestCase):
 
     def test_graph(self):
         in_graph=[ 
@@ -24,5 +24,3 @@ class TestMergeSort(unittest.TestCase):
         result_graph  = graph.roy_warshall(in_graph)  
     
         self.assertEqual(expected, result_graph )
-
-
