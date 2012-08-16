@@ -1,11 +1,7 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.cocktail_sort as sort
    
-class TestCocktailSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = random.sample(range(0, 100), 20)
-
+class TestCocktailSort(BaseTest):
     def test_sort(self):
         expected_array = sorted(self.in_array)
         result_array   = sort.cocktail_sort( self.in_array)  
@@ -13,6 +9,6 @@ class TestCocktailSort(unittest.TestCase):
         self.assertEqual(expected_array, result_array )
 
 if __name__ == '__main__':
-    unittest.main()
+    BaseTest.main()
 
 

@@ -1,11 +1,7 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.quick_sort as sort
     
-class TestQuickSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = random.sample(range(0, 100), 20)
-
+class TestQuickSort(BaseTest):
     def test_sort(self):
         expected_array = sorted(self.in_array)
         result_array   = sort.quick_sort( self.in_array[:])  
@@ -13,6 +9,6 @@ class TestQuickSort(unittest.TestCase):
         self.assertEqual(expected_array, result_array )
 
 if __name__ == '__main__':
-    unittest.main()
+    BaseTest.main()
 
 

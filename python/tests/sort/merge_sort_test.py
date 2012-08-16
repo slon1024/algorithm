@@ -1,15 +1,12 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.merge_sort as sort
 
-class TestMergeSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = random.sample(range(0, 100), 20)
-        self.expected_array = sorted(self.in_array)
+class TestMergeSort(BaseTest):
 
     def test_sort(self):
         result_array  = sort.merge_sort( self.in_array)  
     
         self.assertEqual(self.expected_array, result_array )
 
-
+if __name__ == '__main__':
+    BaseTest.main()

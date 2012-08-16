@@ -1,24 +1,7 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.binary_search as search
 
-class TestInsertionSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = range(20)
-   
-    def test_search_elemeent_two(self):
-        key = 2
-
-        find = search.binary_search( self.in_array, key)  
-    
-        self.assertEqual(key, find)
-
-    def test_search_not_find_key(self):
-        key = 100
-
-        find = search.binary_search( self.in_array, key)
-
-        self.assertEqual(None, find )
+class TestInsertionSort(BaseTest):
 
     def test_search_empty_in( self ):
         key  = 1
@@ -27,4 +10,7 @@ class TestInsertionSort(unittest.TestCase):
 
         self.assertEqual(None, find )
 
+
+if __name__ == '__main__':
+    BaseTest.main()
 

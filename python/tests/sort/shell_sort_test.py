@@ -1,11 +1,7 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.shell_sort as sort
     
-class TestShellSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = random.sample(range(0, 100), 20)
-
+class TestShellSort(BaseTest):
     def test_sort(self):
         expected_array = sorted(self.in_array)
         result_array   = sort.shell_sort( self.in_array)  
@@ -13,6 +9,6 @@ class TestShellSort(unittest.TestCase):
         self.assertEqual(expected_array, result_array )
 
 if __name__ == '__main__':
-    unittest.main()
+    BaseTest.main()
 
 

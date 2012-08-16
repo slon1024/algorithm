@@ -13,6 +13,6 @@ class TestSelectionSort(unittest.TestCase):
         self.assertEqual(expected_array, result_array )
 
 if __name__ == '__main__':
-    unittest.main()
+    BaseTest.main()
 
 

@@ -1,10 +1,7 @@
-import random
-import unittest
+from tests.sort.base_test import BaseTest
 import src.sort.strand_sort as sort
     
-class TestStrandSort(unittest.TestCase):
-    def setUp(self):
-        self.in_array = random.sample(range(0, 100), 20)
+class TestStrandSort(BaseTest):
 
     def test_sort(self):
         expected_array = sorted(self.in_array)
@@ -13,6 +10,6 @@ class TestStrandSort(unittest.TestCase):
         self.assertEqual(expected_array, result_array )
 
 if __name__ == '__main__':
-    unittest.main()
+    BaseTest.main()
 
 
