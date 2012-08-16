@@ -77,14 +77,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTest.cs" />
     <Compile Include="BubbleSortTest.cs" />
     <Compile Include="CocktailSortTest.cs" />
     <Compile Include="CombSortTest.cs" />
     <Compile Include="GnomeSortTest.cs" />
+    <Compile Include="HeapSortTest.cs" />
     <Compile Include="InsertionSortTest.cs" />
     <Compile Include="MergeSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickSortTest.cs" />
+    <Compile Include="RecursionInsertionSortTest.cs" />
+    <Compile Include="ReverseInsertionSortTest.cs" />
+    <Compile Include="SelectionSortTest.cs" />
+    <Compile Include="ShellSortTest.cs" />
     <Compile Include="StrandSortTest.cs" />
+    <Compile Include="TreeSortTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sort\Sort.csproj">

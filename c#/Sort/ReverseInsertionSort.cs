@@ -2,7 +2,7 @@
 
 namespace Sort
 {
-    public class InsertionSort : ISort
+    public class ReverseInsertionSort : ISort
     {
         public ArrayList Sort(ArrayList inArray)
         {
@@ -11,7 +11,7 @@ namespace Sort
                 var current = (int)inArray[i];
                 int j = i - 1;
 
-                while(j > -1 && (int)inArray[j] > current )
+                while (j > -1 && (int)inArray[j] < current)
                 {
                     inArray[j + 1] = inArray[j];
                     j--;

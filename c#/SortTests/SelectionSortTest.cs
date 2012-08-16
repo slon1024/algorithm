@@ -5,9 +5,9 @@ using Sort;
 namespace SortTests
 {
     [TestFixture]
-    public class InsertionSortTest : BaseTest
+    public class SelectionSortTest : BaseTest
     {
-        protected ISort _sort = new InsertionSort();
+        protected ISort _sort = new SelectionSort();
 
         [Test]
         public void testSort()

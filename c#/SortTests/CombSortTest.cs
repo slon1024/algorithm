@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using NUnit.Framework;
 using Sort;
 
 namespace SortTests
 {
-    class CombSortTest
+    [TestFixture]
+    public class CombSortTest : BaseTest
     {
-        private readonly ArrayList _values = new ArrayList();
-
-        [SetUp]
-        public void SetUp()
-        {
-            var randomNumber = new Random();
-            for (int i = 0; i < 100; i++)
-                _values.Add(randomNumber.Next(1, 1000));
-        }
+        protected ISort _sort = new CombSort();
 
         [Test]
         public void testSort()
@@ -23,11 +15,10 @@ namespace SortTests
             var expected = (ArrayList)_values.Clone();
             expected.Sort();
 
-            var combSort = new CombSort();
-            var actual = combSort.Sort(_values);
+            var actual = _sort.Sort(_values);
 
             Assert.That(expected, Is.EqualTo(actual));
         }
-    }
 
+    }
 }

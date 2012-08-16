@@ -1,33 +1,24 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using NUnit.Framework;
 using Sort;
 
 namespace SortTests
 {
     [TestFixture]
-    public class MergeSortTest
+    public class MergeSortTest : BaseTest
     {
-        private readonly ArrayList _values = new ArrayList();
-
-        [SetUp]
-        public void SetUp()
-        {
-            var randomNumber = new Random();
-            for (int i = 0; i < 100; i++)
-                _values.Add(randomNumber.Next(1, 1000));
-        }
+        protected ISort _sort = new MergeSort();
 
         [Test]
         public void testSort()
         {
-            var expected = (ArrayList) _values.Clone();
+            var expected = (ArrayList)_values.Clone();
             expected.Sort();
 
-            var mergeSort = new MergeSort();
-            var actual = mergeSort.Sort(_values);
-            
+            var actual = _sort.Sort(_values);
+
             Assert.That(expected, Is.EqualTo(actual));
         }
+
     }
 }

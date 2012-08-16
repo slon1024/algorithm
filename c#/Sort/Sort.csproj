@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4FFA028A-5D82-42CE-94B2-9DB88BE9212C}</ProjectGuid>
@@ -62,12 +62,19 @@
     <Compile Include="CocktailSort.cs" />
     <Compile Include="CombSort.cs" />
     <Compile Include="GnomeSort.cs" />
+    <Compile Include="HeapSort.cs" />
     <Compile Include="InsertionSort.cs" />
     <Compile Include="ISort.cs" />
     <Compile Include="MergeSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickSort.cs" />
+    <Compile Include="RecursionInsertionSort.cs" />
+    <Compile Include="ReverseInsertionSort.cs" />
+    <Compile Include="SelectionSort.cs" />
+    <Compile Include="ShellSort.cs" />
     <Compile Include="StrandSort.cs" />
+    <Compile Include="TreeSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
