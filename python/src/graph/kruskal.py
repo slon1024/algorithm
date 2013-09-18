@@ -1,6 +1,7 @@
 class Forest():
     def __init__(self):
         """(Forest) -> void
+
         Initialize forest
         """
         self._sets={}
@@ -9,8 +10,8 @@ class Forest():
         """(Forest, str) -> void
 
         Make new tree
-        >>forest = Forest()
-        >>forest.make('A')
+        >>>forest = Forest()
+        >>>forest.make('A')
         """
         self._sets[node] = node
 
@@ -21,7 +22,7 @@ class Forest():
 
         >>>forest = Forest()
         >>>forest.make('A')
-        >>forest.find('A')
+        >>>forest.find('A')
         A
         """
         return self._sets[node]
@@ -34,8 +35,8 @@ class Forest():
         >>>forest = Forest()
         >>>forest.make('A')
         >>>forest.make('B')
-        >>forest.union('A', 'B')
-        >>forest.find('A') == forest.find('B')
+        >>>forest.union('A', 'B')
+        >>>forest.find('A') == forest.find('B')
         True
         """
         value_a = self._sets[node_a]
