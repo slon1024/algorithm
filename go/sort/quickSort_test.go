@@ -1,16 +1,16 @@
 package sort
 import "testing"
 
-func TestEmptyInput(t *testing.T) {
+func TestQuickSortEmptyInput(t *testing.T) {
     values := []int{}
     baseTest(values, t)
 }
 
-func TestBigData(t *testing.T) {
+func TestQuickSortBigData(t *testing.T) {
     baseTest(genBigArray(), t)
 }
 
-func TestNegativeValues(t *testing.T) {
+func TestQuickSortNegativeValues(t *testing.T) {
     values := []int{-3, -5, -1, -15}
     baseTest(values, t)
 }
